@@ -17,3 +17,4 @@ const sql = neon(databaseUrl);
 export const db = drizzle(sql, {
   casing: "snake_case", // Example option; adjust based on your needs
 });
+
