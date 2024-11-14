@@ -7,10 +7,10 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"push:dev": "node src/utils/pushToDatabase.js .env.development",
-		"push:test": "node src/utils/pushToDatabase.js .env.testing",
-		"push:green": "node src/utils/pushToDatabase.js .env.green",
-		"push:prod": "node src/utils/pushToDatabase.js .env.production"
+		"push:dev": "node utils/pushToDatabase.js .env.development",
+		"push:test": "node utils/pushToDatabase.js .env.testing",
+		"push:green": "node utils/pushToDatabase.js .env.green",
+		"push:prod": "node utils/pushToDatabase.js .env.production"
 	},
 	"dependencies": {
 		"@neondatabase/serverless": "^0.10.3",
