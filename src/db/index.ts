@@ -6,15 +6,18 @@ import { neon } from "@neondatabase/serverless";
 const databaseUrl = process.env.DATABASE_URL;
 
 if (!databaseUrl) {
-  throw new Error("DATABASE_URL is not defined");
+	throw new Error("DATABASE_URL is not defined");
 }
+
+console.log("DATABASE_URL", databaseUrl); // debugging
 
 const sql = neon(databaseUrl);
 
 // const options = {casing: "snake_case"};
 
 // Drizzle configuration
-export const db = drizzle(sql, {
-  casing: "snake_case", // Example option; adjust based on your needs
+const db = drizzle(sql, {
+	// casing: "snake_case", // Example option; adjust based on your needs
 });
 
+export default db;
