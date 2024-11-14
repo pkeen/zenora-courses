@@ -7,13 +7,15 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"push:dev": "dotenv -e .env.development drizzle-kit push --url $DATABASE_URL",
-		"push:prod": "dotenv -e .env.production drizzle-kit push --url $DATABASE_URL",
-		"push:test": "dotenv -e .env.testing drizzle-kit push --url $DATABASE_URL",
-		"push:all": "pnpm run push:dev && pnpm run push:prod && pnpm run push:test"
+		"push:dev": "node src/utils/pushToDatabase.js .env.development",
+		"push:test": "node src/utils/pushToDatabase.js .env.testing",
+		"push:green": "node src/utils/pushToDatabase.js .env.green",
+		"push:prod": "node src/utils/pushToDatabase.js .env.production"
 	},
 	"dependencies": {
 		"@neondatabase/serverless": "^0.10.3",
+		"chalk": "4",
+		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.36.1",
 		"next": "15.0.3",
 		"react": "19.0.0-rc-66855b96-20241106",
