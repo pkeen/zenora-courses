@@ -1,5 +1,12 @@
 import { config } from "dotenv";
 import { z } from "zod";
+import {
+	logError,
+	logInfo,
+	logSuccess,
+	logWarning,
+	logBreak,
+} from "../utils/chalk";
 
 // Load environment variables dynamically
 const envFile = `.env.${process.env.NODE_ENV || "development"}`;
@@ -22,7 +29,8 @@ if (!parsedEnv.success) {
 }
 
 if (process.env.NODE_ENV !== "production") {
-    console.log("Running in environment: ", process.env.NODE_ENV);
+	logInfo(`Running in environment: ${process.env.NODE_ENV}`);
+	logBreak();
 }
 
 export const env = parsedEnv.data;
