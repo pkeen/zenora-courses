@@ -1,7 +1,7 @@
 import { pgTable, serial, text } from "drizzle-orm/pg-core";
 import { timestamps } from "./columns/helpers";
 
-const users = pgTable("users", {
+const user = pgTable("users", {
 	id: serial().primaryKey(),
 	name: text().notNull(),
 	email: text("email").notNull().unique(), // Unique email column
@@ -9,4 +9,4 @@ const users = pgTable("users", {
 	...timestamps,
 });
 
-export default users;
+export default user;

@@ -6,16 +6,10 @@ import {
 	numeric,
 	pgEnum,
 } from "drizzle-orm/pg-core";
-import { timestamps } from "./columns/helpers";
+import { timestamps, publishedStatusEnum } from "./columns/helpers";
 import users from "./user";
 
-// Enums must be exported to be created in SQL
-export const publishedStatusEnum = pgEnum("published_status", [
-	"draft",
-	"published",
-]);
-
-export const courses = pgTable("courses", {
+const course = pgTable("courses", {
 	id: serial().primaryKey(),
 	userId: integer("user_id")
 		.notNull()
@@ -29,4 +23,4 @@ export const courses = pgTable("courses", {
 	...timestamps,
 });
 
-export default courses;
+export default course;
