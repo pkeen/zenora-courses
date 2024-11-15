@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"module": "commonjs", // CommonJS for Node.js
+		"target": "esnext", // Use modern JavaScript syntax
+		"moduleResolution": "node", // Resolve Node.js-style modules
+		"outDir": "./utils/dist", // Output folder for transpiled JS
+		"rootDir": "./", // Extend root directory to include the whole project
+		"strict": true, // Strict type checking
+		"esModuleInterop": true, // Enable ES module compatibility
+		"allowSyntheticDefaultImports": true, // Allow default imports
+		"resolveJsonModule": true // Enable JSON imports
+	},
+	"include": ["utils/src/**/*"], // Only include files in utils/src
+	"exclude": ["node_modules"] // Exclude dependencies
+}
