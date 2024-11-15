@@ -1,12 +1,14 @@
 import { defineConfig } from "drizzle-kit";
+import { env } from "./src/env";
 
-const databaseUrl = process.env.DATABASE_URL || "databaseURl not found";
+const databaseUrl = env.DATABASE_URL;
 
 export default defineConfig({
 	dialect: "postgresql", // 'mysql' | 'sqlite' | 'turso'
-	schema: "./src/db/schema.ts",
-	// out: "./migrations", // Directory to store migration files
+	schema: "./src/db/schema/index.ts", // Path to schema file
+	out: "./src/db/migrations", // Directory to store migration files
 	dbCredentials: {
-		url:databaseUrl,
+		url: databaseUrl,
 	},
+	verbose: true,
 });

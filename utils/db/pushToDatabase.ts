@@ -23,10 +23,10 @@ const pushDatabaseSchema = () => {
 	try {
 		logInfo("Pushing database schema...");
 		execSync(
-			`pnpm exec drizzle-kit push --dialect=postgresql --schema=./src/db/schema.ts --url="${env.DATABASE_URL}"`,
+			`pnpm exec drizzle-kit push --dialect=postgresql --schema=./src/db/schema/index.ts --url="${env.DATABASE_URL}"`,
 			{ stdio: "inherit" }
 		);
-		logSuccess("Database schema successfully pushed!");
+		logSuccess("Process over");
 	} catch (error: any) {
 		logError("Error pushing database schema:");
 		console.error(error.message);

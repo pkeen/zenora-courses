@@ -11,7 +11,8 @@
 		"push:test": "NODE_ENV=test tsx utils/db/pushToDatabase.ts",
 		"push:green": "NODE_ENV=green tsx utils/db/pushToDatabase.ts",
 		"push:prod": "NODE_ENV=production tsx utils/db/pushToDatabase.ts",
-		"seed:dev": "NODE_ENV=development tsx src/db/seed/userSeed.ts"
+		"seed:dev": "NODE_ENV=development tsx src/db/seed/userSeed.ts",
+		"studio": "pnpm drizzle-kit studio"
 	},
 	"dependencies": {
 		"@neondatabase/serverless": "^0.10.3",

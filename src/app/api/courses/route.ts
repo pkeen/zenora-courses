@@ -1,5 +1,5 @@
 import db from "@/db";
-import { courses as coursesTable} from "../../../db/schema";
+import { courses as coursesTable } from "@/db/schema";
 
 export async function GET(req: Request) {
 	try {
