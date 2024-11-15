@@ -1,8 +1,8 @@
 // console.log(import.meta.url);
 // console.log(new URL("../../../db/index.ts", import.meta.url));
 
-import db from "../../../src/db/index";
-import { users as usersTable } from "../../../src/db/schema";
+import db from "../../src/db/index";
+import { users as usersTable } from "../../src/db/schema";
 // const db = require("../../index");
 // const { users: usersTable } = require("../../schema");
 

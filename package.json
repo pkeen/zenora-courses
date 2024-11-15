@@ -7,10 +7,10 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"push:dev": "node utils/pushToDatabase.js .env.development",
-		"push:test": "node utils/pushToDatabase.js .env.testing",
-		"push:green": "node utils/pushToDatabase.js .env.green",
-		"push:prod": "node utils/pushToDatabase.js .env.production",
+		"push:dev": "NODE_ENV=development tsx utils/db/pushToDatabase.ts",
+		"push:test": "NODE_ENV=test tsx utils/db/pushToDatabase.ts",
+		"push:green": "NODE_ENV=green tsx utils/db/pushToDatabase.ts",
+		"push:prod": "NODE_ENV=production tsx utils/db/pushToDatabase.ts",
 		"seed:dev": "NODE_ENV=development tsx src/db/seed/userSeed.ts"
 	},
 	"dependencies": {

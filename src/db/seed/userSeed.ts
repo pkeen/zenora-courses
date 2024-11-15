@@ -4,7 +4,6 @@ import { users as usersTable } from "@/db/schema";
 // const { users: usersTable } = require("../../schema");
 
 console.log("Seeding users...");
-console.log("database_URL", process.env.DATABASE_URL);
 
 const seedUsers = async () => {
 	try {

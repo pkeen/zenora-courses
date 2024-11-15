@@ -32,10 +32,10 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"utils/src/db/pushToDatabase.js",
-		"utils/src/db/userSeed.ts",
-        "types/**/*",
-        "src/**/*"
+		"utils/db/pushToDatabase.ts",
+		"utils/db/userSeed.ts",
+		"types/**/*",
+		"src/**/*"
 	],
 	"exclude": ["node_modules"]
 }
